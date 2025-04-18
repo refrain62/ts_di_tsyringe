@@ -4,10 +4,14 @@ export default class User {
   userId: number = 0
   name: string = ''
 
+  constructor(private database: Database) {
+    this.userId = 0
+    this.name = ''
+  }
+
   saveUser(): void {
     if (this.userId) {
-      const database = new Database()
-      database.saveUser(this)
+      this.database.saveUser(this)
     }
   }
 }
