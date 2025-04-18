@@ -21,3 +21,32 @@ package.jsonの調整
     "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
   },
 ```
+
+## デコレーターの利用準備
+tsconfig.json の調整
+```
+{
+  'compilerOptions': {
+    'target': 'ES5',
+    'experimentalDecorators': true
+  }
+}
+```
+
+## tsyringeとreflect-metadataをインストール
+```
+npm install --save tsyringe
+npm install --save reflect-metadata
+```
+
+tsconfig.json の調整
+```
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+```
+
+
