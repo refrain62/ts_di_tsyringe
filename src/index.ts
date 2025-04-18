@@ -1,8 +1,8 @@
-function hello(name: string): string {
-  console.log("Hello, " + name + "!");
-  return "Hello, " + name + "!";
-}
+import User from './user'
 
-let joinName: string = "World";
+const user = new User()
 
-hello(joinName);
+user.userId = 1
+user.name = 'yamada'
+user.saveUser() 
+
